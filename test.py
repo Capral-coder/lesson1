@@ -4,9 +4,7 @@ lists = [[1, 3, 3, 4], [2, 1, 3, 5], [4, 0, 1, 7], [5, 2, 1, 0], [0, 4, 8, 3]]
 for i in range(len(lists)):
     for x in range(len(lists)-1):
         if lists[x][1] > lists[x+1][1]:
-            data=lists[x]
             lists[x], lists[x+1] = lists[x+1], lists[x]
-            lists[x+1] = data
 print(lists)
 print(" ")
 
@@ -23,9 +21,7 @@ for key in dist:
     for i in range(len(data)):
         for x in range(len(data)-1):
             if data[x] < data[x+1]:
-                data_num=data[x]
-                data[x]=data[x+1]
-                data[x+1] = data_num
+                data[x], data[x+1] = data[x+1], data[x]
 print(dist)
 print(" ")
 
